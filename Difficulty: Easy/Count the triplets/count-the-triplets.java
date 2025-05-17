@@ -13,7 +13,6 @@ class Solution {
        Arrays.sort(arr);
        int count = 0;
        int n = arr.length;
-       HashSet<ArrayList<Integer>> set = new HashSet<>();
        
        for(int i=n-1; i>=2; i--) {
            int tar = arr[i];
@@ -26,11 +25,6 @@ class Solution {
                
                if(sum == tar) {
                    count++;
-                   ArrayList<Integer> list = new ArrayList<>();
-                   list.add(arr[si]);
-                   list.add(arr[ei]);
-                   list.add(tar);
-                   set.add(list);
                    si++;
                    ei--;
                }
